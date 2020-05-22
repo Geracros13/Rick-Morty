@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import rym from "../images/hero.png";
 
-const ContainerAll = styled.div`
+const ContainerHero = styled.div`
 	width: 100%;
 	height: 350px;
 	background-color: #212121;
@@ -12,9 +12,21 @@ const ContainerAll = styled.div`
 	flex-wrap: wrap;
 	@media only screen and (min-width: 320px) and (max-width: 720px) {
 		height: 590px;
+		width: 100%;
+	}
+`;
+
+const All = styled.div`
+	margin: 0 100px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@media only screen and (min-width: 320px) and (max-width: 720px) {
+		margin: 0 15px 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
 	}
 `;
 
@@ -23,12 +35,33 @@ const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-left: 100px;
+	@media only screen and (min-width: 320px) and (max-width: 720px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 0 15px 0;
+	}
+`;
+
+const ContainerIMG = styled.div`
+	@media only screen and (min-width: 320px) and (max-width: 720px) {
+		margin: 0 15px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 `;
 
 const IMG = styled.img`
 	width: auto;
 	height: 350px;
 	padding-left: 1em;
+	@media only screen and (min-width: 320px) and (max-width: 720px) {
+		width: 100%;
+		object-fit: cover;
+	}
 `;
 
 const H2 = styled.h2`
@@ -85,31 +118,37 @@ const BtnConsultar = styled.button`
 
 const Hero = () => {
 	return (
-		<ContainerAll>
-			<IMG src={rym} />
-			<Container>
-				<H2>Puedes consultar los personajes con los siguientes filtros</H2>
-				<Select>
-					<option value="" hidden>
-						- Select Status -
-					</option>
-					<option value="Alive">Alive</option>
-					<option value="Dead">Dead</option>
-					<option value="unknown">Unknown</option>
-				</Select>
-				<Select>
-					<option value="" hidden>
-						- Select Gender -
-					</option>
-					<option value="Female">Female</option>
-					<option value="Male">Male</option>
-					<option value="Genderless">Genderless</option>
-					<option value="unknown">Unknown</option>
-				</Select>
+		<ContainerHero>
+			<All>
+				<ContainerIMG>
+					<IMG src={rym} />
+				</ContainerIMG>
+				<Container>
+					<H2>
+						Puedes consultar los personajes con los siguientes filtros
+					</H2>
+					<Select>
+						<option value="" hidden>
+							- Select Status -
+						</option>
+						<option value="Alive">Alive</option>
+						<option value="Dead">Dead</option>
+						<option value="unknown">Unknown</option>
+					</Select>
+					<Select>
+						<option value="" hidden>
+							- Select Gender -
+						</option>
+						<option value="Female">Female</option>
+						<option value="Male">Male</option>
+						<option value="Genderless">Genderless</option>
+						<option value="unknown">Unknown</option>
+					</Select>
 
-				<BtnConsultar>Consultar</BtnConsultar>
-			</Container>
-		</ContainerAll>
+					<BtnConsultar>Consultar</BtnConsultar>
+				</Container>
+			</All>
+		</ContainerHero>
 	);
 };
 

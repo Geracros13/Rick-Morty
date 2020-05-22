@@ -106,7 +106,7 @@ const Footer = () => {
 							rel="noopener noreferrer"
 							target="_blank"
 						>
-							Linkedin
+							LinkedIn
 						</A>
 					</Li>
 					<Li>

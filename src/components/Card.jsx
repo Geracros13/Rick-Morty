@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import avatar from "../images/alien.jpeg";
 
-const ContainerCards = styled.div`
+const Container = styled.div`
 	display: row;
 	justify-content: center;
 	flex-direction: column;
@@ -15,6 +15,11 @@ const ContainerCards = styled.div`
 		justify-content: center;
 		flex-direction: column;
 	}
+`;
+
+const Cards = styled.div`
+	margin: 0 100px 0;
+	padding: 0 0 25px;
 `;
 
 const CardAll = styled.div`
@@ -67,9 +72,10 @@ const H2 = styled.h2`
 	color: #ff9800;
 	font-size: 3em;
 	margin: 0 5px 0 5px;
+
 	letter-spacing: 0.8px;
 	font-weight: 500;
-	padding: 2px;
+	padding: 30px;
 	text-transform: uppercase;
 	text-align: center;
 `;
@@ -84,72 +90,74 @@ const H4 = styled.h4`
 
 const Card = () => {
 	return (
-		<ContainerCards>
+		<Container>
 			<H2>The Rick and Morty API</H2>
-			<CardAll>
-				<IMG src={avatar} alt="hello" />
-				<CardContainer>
-					<H4>Nombre personaje</H4>
-					<P>Status:</P>
-					<P>Specie:</P>
-					<P>Origin:</P>
-				</CardContainer>
-			</CardAll>
-			<CardAll>
-				<IMG src={avatar} alt="hello" />
-				<CardContainer>
-					<H4>Nombre personaje</H4>
-					<P>Status:</P>
-					<P>Specie:</P>
-					<P>Origin:</P>
-				</CardContainer>
-			</CardAll>
-			<CardAll>
-				<IMG src={avatar} alt="hello" />
-				<CardContainer>
-					<H4>Nombre personaje</H4>
-					<P>Status:</P>
-					<P>Specie:</P>
-					<P>Origin:</P>
-				</CardContainer>
-			</CardAll>
-			<CardAll>
-				<IMG src={avatar} alt="hello" />
-				<CardContainer>
-					<H4>Nombre personaje</H4>
-					<P>Status:</P>
-					<P>Specie:</P>
-					<P>Origin:</P>
-				</CardContainer>
-			</CardAll>
-			<CardAll>
-				<IMG src={avatar} alt="hello" />
-				<CardContainer>
-					<H4>Nombre personaje</H4>
-					<P>Status:</P>
-					<P>Specie:</P>
-					<P>Origin:</P>
-				</CardContainer>
-			</CardAll>
-			<CardAll>
-				<IMG src={avatar} alt="hello" />
-				<CardContainer>
-					<H4>Nombre personaje</H4>
-					<P>Status:</P>
-					<P>Specie:</P>
-					<P>Origin:</P>
-				</CardContainer>
-			</CardAll>
-			<CardAll>
-				<IMG src={avatar} alt="hello" />
-				<CardContainer>
-					<H4>Nombre personaje</H4>
-					<P>Status:</P>
-					<P>Specie:</P>
-					<P>Origin:</P>
-				</CardContainer>
-			</CardAll>
-		</ContainerCards>
+			<Cards>
+				<CardAll>
+					<IMG src={avatar} alt="hello" />
+					<CardContainer>
+						<H4>Nombre personaje</H4>
+						<P>Status:</P>
+						<P>Specie:</P>
+						<P>Origin:</P>
+					</CardContainer>
+				</CardAll>
+				<CardAll>
+					<IMG src={avatar} alt="hello" />
+					<CardContainer>
+						<H4>Nombre personaje</H4>
+						<P>Status:</P>
+						<P>Specie:</P>
+						<P>Origin:</P>
+					</CardContainer>
+				</CardAll>
+				<CardAll>
+					<IMG src={avatar} alt="hello" />
+					<CardContainer>
+						<H4>Nombre personaje</H4>
+						<P>Status:</P>
+						<P>Specie:</P>
+						<P>Origin:</P>
+					</CardContainer>
+				</CardAll>
+				<CardAll>
+					<IMG src={avatar} alt="hello" />
+					<CardContainer>
+						<H4>Nombre personaje</H4>
+						<P>Status:</P>
+						<P>Specie:</P>
+						<P>Origin:</P>
+					</CardContainer>
+				</CardAll>
+				<CardAll>
+					<IMG src={avatar} alt="hello" />
+					<CardContainer>
+						<H4>Nombre personaje</H4>
+						<P>Status:</P>
+						<P>Specie:</P>
+						<P>Origin:</P>
+					</CardContainer>
+				</CardAll>
+				<CardAll>
+					<IMG src={avatar} alt="hello" />
+					<CardContainer>
+						<H4>Nombre personaje</H4>
+						<P>Status:</P>
+						<P>Specie:</P>
+						<P>Origin:</P>
+					</CardContainer>
+				</CardAll>
+				<CardAll>
+					<IMG src={avatar} alt="hello" />
+					<CardContainer>
+						<H4>Nombre personaje</H4>
+						<P>Status:</P>
+						<P>Specie:</P>
+						<P>Origin:</P>
+					</CardContainer>
+				</CardAll>
+			</Cards>
+		</Container>
 	);
 };
 
