@@ -89,10 +89,8 @@ const Select = styled.select`
 
 	option {
 		color: black;
-		background: white;
+		background: #bbb9ba;
 		display: flex;
-		min-height: 20px;
-		padding: 0px 2px 1px;
 	}
 `;
 
@@ -105,7 +103,7 @@ const BtnConsultar = styled.button`
 	padding: 0.25em 1em;
 	height: 40px;
 	width: 150px;
-	border-radius: 3px;
+	border-radius: 50px;
 	transition: width 2s;
 	cursor: pointer;
 
@@ -113,6 +111,9 @@ const BtnConsultar = styled.button`
 		width: 100;
 		background-color: #a80038;
 		color: #212121;
+	}
+	&:active {
+		transform: scale(0.9);
 	}
 `;
 

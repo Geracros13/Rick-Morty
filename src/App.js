@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
 import Copyright from "./components/Copyright";
+import useGetData from "./components/useGetData";
 
 const GlobalStyle = createGlobalStyle`
 body{
@@ -16,6 +17,8 @@ body{
 `;
 
 function App() {
+	const data = useGetData();
+	console.log(data);
 	return (
 		<>
 			<GlobalStyle />
