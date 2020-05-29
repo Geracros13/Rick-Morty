@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import rym from "../images/hero.png";
+// import useGetData from "./components/useGetData";
 
 const ContainerHero = styled.div`
 	width: 100%;
@@ -117,6 +118,16 @@ const BtnConsultar = styled.button`
 	}
 `;
 
+const Form = styled.form`
+	display: contents;
+`;
+
+// const handleSubmit = (e) => {
+// 	e.preventDefault();
+
+// 	alert("Que paso muchacho");
+// };
+
 const Hero = () => {
 	return (
 		<ContainerHero>
@@ -128,25 +139,27 @@ const Hero = () => {
 					<H2>
 						Puedes consultar los personajes con los siguientes filtros
 					</H2>
-					<Select>
-						<option value="" hidden>
-							- Select Status -
-						</option>
-						<option value="Alive">Alive</option>
-						<option value="Dead">Dead</option>
-						<option value="unknown">Unknown</option>
-					</Select>
-					<Select>
-						<option value="" hidden>
-							- Select Gender -
-						</option>
-						<option value="Female">Female</option>
-						<option value="Male">Male</option>
-						<option value="Genderless">Genderless</option>
-						<option value="unknown">Unknown</option>
-					</Select>
+					<Form>
+						<Select>
+							<option value="" hidden>
+								- Select Status -
+							</option>
+							<option value="Alive">Alive</option>
+							<option value="Dead">Dead</option>
+							<option value="unknown">Unknown</option>
+						</Select>
+						<Select>
+							<option value="" hidden>
+								- Select Gender -
+							</option>
+							<option value="Female">Female</option>
+							<option value="Male">Male</option>
+							<option value="Genderless">Genderless</option>
+							<option value="unknown">Unknown</option>
+						</Select>
 
-					<BtnConsultar>Consultar</BtnConsultar>
+						<BtnConsultar type="submit">Consultar</BtnConsultar>
+					</Form>
 				</Container>
 			</All>
 		</ContainerHero>

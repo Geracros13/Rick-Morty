@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import avatar from "../images/alien.jpeg";
 
 const Container = styled.div`
 	display: row;
@@ -63,9 +62,12 @@ const IMG = styled.img`
 
 const P = styled.p`
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 400;
 	margin: 5px;
-	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+
+	color: #9e9e9e;
 `;
 
 const H2 = styled.h2`
@@ -76,86 +78,73 @@ const H2 = styled.h2`
 	letter-spacing: 0.8px;
 	font-weight: 500;
 	padding: 30px;
-	text-transform: uppercase;
 	text-align: center;
 `;
 
 const H4 = styled.h4`
-	margin: 0 0 10px 0;
+	margin: 0 0 10px 5px;
 	font-weight: 900;
+	font-size: 18px;
 	letter-spacing: 0.7px;
 	color: #ff9800;
-	text-transform: uppercase;
+	text-align: center;
 `;
 
-const Card = () => {
+const SPAN = styled.span`
+	color: white;
+	font-weight: 900;
+	letter-spacing: 0.5px;
+	text-transform: capitalize;
+	margin-left: 5px;
+`;
+
+const Color = styled.span`
+	display: inline-block;
+	height: 0.5em;
+	width: 0.5em;
+	margin-left: 0.3em;
+	background: red;
+	border-radius: 50%;
+`;
+
+// const Colors = {
+// 	alive: {
+// 		background: "#55CC44",
+// 	},
+// 	dead: {
+// 		background: "#D63D2E",
+// 	},
+// 	unknown: {
+// 		background: "#23F1E8",
+// 	},
+// };
+
+const Card = (props) => {
 	return (
 		<Container>
 			<H2>The Rick and Morty API</H2>
 			<Cards>
-				<CardAll>
-					<IMG src={avatar} alt="hello" />
-					<CardContainer>
-						<H4>Nombre personaje</H4>
-						<P>Status:</P>
-						<P>Specie:</P>
-						<P>Origin:</P>
-					</CardContainer>
-				</CardAll>
-				<CardAll>
-					<IMG src={avatar} alt="hello" />
-					<CardContainer>
-						<H4>Nombre personaje</H4>
-						<P>Status:</P>
-						<P>Specie:</P>
-						<P>Origin:</P>
-					</CardContainer>
-				</CardAll>
-				<CardAll>
-					<IMG src={avatar} alt="hello" />
-					<CardContainer>
-						<H4>Nombre personaje</H4>
-						<P>Status:</P>
-						<P>Specie:</P>
-						<P>Origin:</P>
-					</CardContainer>
-				</CardAll>
-				<CardAll>
-					<IMG src={avatar} alt="hello" />
-					<CardContainer>
-						<H4>Nombre personaje</H4>
-						<P>Status:</P>
-						<P>Specie:</P>
-						<P>Origin:</P>
-					</CardContainer>
-				</CardAll>
-				<CardAll>
-					<IMG src={avatar} alt="hello" />
-					<CardContainer>
-						<H4>Nombre personaje</H4>
-						<P>Status:</P>
-						<P>Specie:</P>
-						<P>Origin:</P>
-					</CardContainer>
-				</CardAll>
-				<CardAll>
-					<IMG src={avatar} alt="hello" />
-					<CardContainer>
-						<H4>Nombre personaje</H4>
-						<P>Status:</P>
-						<P>Specie:</P>
-						<P>Origin:</P>
-					</CardContainer>
-				</CardAll>
-				<CardAll>
-					<IMG src={avatar} alt="hello" />
-					<CardContainer>
-						<H4>Nombre personaje</H4>
-						<P>Status:</P>
-						<P>Specie:</P>
-						<P>Origin:</P>
-					</CardContainer>
-				</CardAll>
+				{props.data.map((resul, id) => (
+					<CardAll key={`Unique-${id}`}>
+						<IMG src={resul.image} alt={resul.name} />
+						<CardContainer>
+							<H4>{resul.name}</H4>
+							<P>
+								Status: <Color />
+								<SPAN>{resul.status}</SPAN>
+							</P>
+							<P>
+								Specie: <SPAN>{resul.species}</SPAN>
+							</P>
+							<P>
+								Gender: <SPAN>{resul.gender}</SPAN>
+							</P>
+							<P>
+								Origin: <SPAN>{resul.origin.name}</SPAN>
+							</P>
+						</CardContainer>
+					</CardAll>
+				))}
 			</Cards>
 		</Container>
 	);

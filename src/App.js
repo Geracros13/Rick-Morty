@@ -1,5 +1,6 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
+import Loader from "./components/Loader";
 import Bar from "./components/Bar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
@@ -19,12 +20,14 @@ body{
 function App() {
 	const data = useGetData();
 	console.log(data);
-	return (
+	return data.length === 0 ? (
+		<Loader />
+	) : (
 		<>
 			<GlobalStyle />
 			<Bar />
 			<Hero />
-			<Card />
+			<Card data={data.results} />
 			<Footer />
 			<Copyright />
 		</>
