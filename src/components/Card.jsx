@@ -103,21 +103,21 @@ const Color = styled.span`
 	height: 0.5em;
 	width: 0.5em;
 	margin-left: 0.3em;
-	background: red;
+	background: ${({ color }) => color.base};
 	border-radius: 50%;
 `;
 
-// const Colors = {
-// 	alive: {
-// 		background: "#55CC44",
-// 	},
-// 	dead: {
-// 		background: "#D63D2E",
-// 	},
-// 	unknown: {
-// 		background: "#23F1E8",
-// 	},
-// };
+const Colors = {
+	Alive: {
+		base: "#55CC44",
+	},
+	Dead: {
+		base: "#D63D2E",
+	},
+	unknown: {
+		base: "#23F1E8",
+	},
+};
 
 const Card = (props) => {
 	return (
@@ -130,7 +130,7 @@ const Card = (props) => {
 						<CardContainer>
 							<H4>{resul.name}</H4>
 							<P>
-								Status: <Color />
+								Status: <Color color={Colors[resul.status]} />
 								<SPAN>{resul.status}</SPAN>
 							</P>
 							<P>
@@ -142,6 +142,7 @@ const Card = (props) => {
 							<P>
 								Origin: <SPAN>{resul.origin.name}</SPAN>
 							</P>
+							{id.id}
 						</CardContainer>
 					</CardAll>
 				))}
