@@ -17,14 +17,14 @@ const Container = styled.div`
 `;
 
 const Cards = styled.div`
-	margin: 0 100px 0;
+	margin: 0 75px 0;
 	padding: 0 0 25px;
 `;
 
 const CardAll = styled.div`
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
-	width: 250px;
+	width: 275px;
 	background-color: #3c3e44;
 	color: white;
 	display: inline-block;
@@ -35,7 +35,7 @@ const CardAll = styled.div`
 	}
 
 	@media only screen and (min-width: 300px) and (max-width: 800px) {
-		width: 250px;
+		width: 275px;
 		margin: 7px;
 	}
 `;
@@ -86,8 +86,12 @@ const H4 = styled.h4`
 	font-weight: 900;
 	font-size: 18px;
 	letter-spacing: 0.7px;
-	color: #ff9800;
-	text-align: center;
+	color: #fff;
+	text-align: left;
+	cursor: pointer;
+	&:hover {
+		color: #ff9800;
+	}
 `;
 
 const SPAN = styled.span`
@@ -103,19 +107,19 @@ const Color = styled.span`
 	height: 0.5em;
 	width: 0.5em;
 	margin-left: 0.3em;
-	background: ${({ color }) => color.base};
+	background: ${({ color }) => color.background};
 	border-radius: 50%;
 `;
 
 const Colors = {
 	Alive: {
-		base: "#55CC44",
+		background: "#55CC44",
 	},
 	Dead: {
-		base: "#D63D2E",
+		background: "#D63D2E",
 	},
 	unknown: {
-		base: "#23F1E8",
+		background: "#23F1E8",
 	},
 };
 
