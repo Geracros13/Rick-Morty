@@ -128,7 +128,7 @@ const Card = (props) => {
 		<Container>
 			<H2>The Rick and Morty API</H2>
 			<Cards>
-				{props.data.map((resul, id) => (
+				{props.results.map((resul, id) => (
 					<CardAll key={`Unique-${id}`}>
 						<IMG src={resul.image} alt={resul.name} />
 						<CardContainer>

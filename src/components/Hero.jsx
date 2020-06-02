@@ -122,12 +122,6 @@ const Form = styled.form`
 	display: contents;
 `;
 
-// const handleSubmit = (e) => {
-// 	e.preventDefault();
-
-// 	alert("Que paso muchacho");
-// };
-
 const Hero = () => {
 	return (
 		<ContainerHero>

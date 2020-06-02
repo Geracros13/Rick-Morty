@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const api = "https://rickandmortyapi.com/api/character";
+const api = "https://rickandmortyapi.com/api/character/?page=3";
 
 const useGetData = () => {
 	const [data, setData] = useState([]);

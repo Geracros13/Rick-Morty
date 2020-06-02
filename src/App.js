@@ -1,12 +1,13 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
+import useGetData from "./components/useGetData";
 import Loader from "./components/Loader";
 import Bar from "./components/Bar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
+import Pagination from "./components/Pagination";
 import Footer from "./components/Footer";
 import Copyright from "./components/Copyright";
-import useGetData from "./components/useGetData";
 
 const GlobalStyle = createGlobalStyle`
 body{
@@ -19,7 +20,7 @@ body{
 
 function App() {
 	const data = useGetData();
-	console.log(data);
+	// console.log(data);
 	return data.length === 0 ? (
 		<Loader />
 	) : (
@@ -27,7 +28,8 @@ function App() {
 			<GlobalStyle />
 			<Bar />
 			<Hero />
-			<Card data={data.results} />
+			<Card results={data.results} />
+			<Pagination info={data.info} />
 			<Footer />
 			<Copyright />
 		</>
