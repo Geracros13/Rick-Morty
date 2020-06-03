@@ -26,6 +26,23 @@ const useGetData = () => {
 		setData(personajes);
 	};
 
+	// const handleNext = () => {
+	// 	const next = data.info.next;
+
+	// 	const [data, setData] = useState([]);
+
+	// 	useEffect(() => {
+	// 		obtenerDatos();
+	// 	}, []);
+
+	// 	const obtenerDatos = async () => {
+	// 		const datos = await fetch(next);
+	// 		const personajes = await datos.json();
+
+	// 		setData(personajes);
+	// 	};
+	// };
+
 	return data;
 };
 
