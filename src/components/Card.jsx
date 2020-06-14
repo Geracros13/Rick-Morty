@@ -128,25 +128,24 @@ const Card = (props) => {
 		<Container>
 			<H2>The Rick and Morty API</H2>
 			<Cards>
-				{props.results.map((resul, id) => (
-					<CardAll key={`Unique-${id}`}>
-						<IMG src={resul.image} alt={resul.name} />
+				{props.results.map((character) => (
+					<CardAll key={character.id}>
+						<IMG src={character.image} alt={character.name} />
 						<CardContainer>
-							<H4>{resul.name}</H4>
+							<H4>{character.name}</H4>
 							<P>
-								Status: <Color color={Colors[resul.status]} />
-								<SPAN>{resul.status}</SPAN>
+								Status: <Color color={Colors[character.status]} />
+								<SPAN>{character.status}</SPAN>
 							</P>
 							<P>
-								Specie: <SPAN>{resul.species}</SPAN>
+								Specie: <SPAN>{character.species}</SPAN>
 							</P>
 							<P>
-								Gender: <SPAN>{resul.gender}</SPAN>
+								Gender: <SPAN>{character.gender}</SPAN>
 							</P>
 							<P>
-								Origin: <SPAN>{resul.origin.name}</SPAN>
+								Origin: <SPAN>{character.origin.name}</SPAN>
 							</P>
-							{id.id}
 						</CardContainer>
 					</CardAll>
 				))}

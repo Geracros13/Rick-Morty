@@ -19,8 +19,8 @@ body{
 `;
 
 function App() {
-	const data = useGetData();
-	// console.log(data);
+	const { data, NextPage, PreviousPage } = useGetData();
+
 	return data.length === 0 ? (
 		<Loader />
 	) : (
@@ -29,7 +29,7 @@ function App() {
 			<Bar />
 			<Hero />
 			<Card results={data.results} />
-			<Pagination info={data.info} />
+			<Pagination next={NextPage} prev={PreviousPage} />
 			<Footer />
 			<Copyright />
 		</>

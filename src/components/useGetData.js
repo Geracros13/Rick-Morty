@@ -1,23 +1,11 @@
 import { useState, useEffect } from "react";
 
-// const api = "https://rickandmortyapi.com/api/character/?page=3";
-
-// 	const [data, setData] = useState([]);
-
-// 	useEffect(() => {
-// 		fetch(api)
-// 			.then((response) => response.json())
-// 			.then((data) => setData(data));
-// 	}, []);
-
 const useGetData = () => {
-	const api = "https://rickandmortyapi.com/api/character/?page=3";
+	const [count, setCount] = useState(1); //Estado de la Paginacion
+
+	const api = `https://rickandmortyapi.com/api/character/?page=${count}`;
 
 	const [data, setData] = useState([]);
-
-	useEffect(() => {
-		obtenerDatos();
-	}, []);
 
 	const obtenerDatos = async () => {
 		const datos = await fetch(api);
@@ -26,24 +14,18 @@ const useGetData = () => {
 		setData(personajes);
 	};
 
-	// const handleNext = () => {
-	// 	const next = data.info.next;
+	useEffect(() => {
+		obtenerDatos();
+	}, [api]); //Para que cada vez que cambie (api) se reenderize de nuevo con los nuevos personajes
 
-	// 	const [data, setData] = useState([]);
+	if (count > 1) {
+		var PreviousPage = () => setCount(count - 1);
+	}
 
-	// 	useEffect(() => {
-	// 		obtenerDatos();
-	// 	}, []);
-
-	// 	const obtenerDatos = async () => {
-	// 		const datos = await fetch(next);
-	// 		const personajes = await datos.json();
-
-	// 		setData(personajes);
-	// 	};
-	// };
-
-	return data;
+	if (count <= 30) {
+		var NextPage = () => setCount(count + 1);
+	}
+	return { data, NextPage, PreviousPage };
 };
 
 export default useGetData;
