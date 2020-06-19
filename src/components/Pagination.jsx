@@ -13,7 +13,7 @@ const Paginations = styled.div`
 	display: inline-block;
 	padding-bottom: 15px;
 `;
-const BtnConsultar = styled.button`
+const Btn = styled.button`
 	background-color: #fd0054;
 	border: 1px solid #a80038;
 	color: #252525;
@@ -43,13 +43,13 @@ const Pagination = (props) => {
 	return (
 		<Container>
 			<Paginations>
-				<BtnConsultar value="Anterior" onClick={PreviousPage}>
+				<Btn value="Anterior" onClick={PreviousPage}>
 					Anterior
-				</BtnConsultar>
+				</Btn>
 
-				<BtnConsultar value="Siguiente" onClick={NextPage}>
+				<Btn value="Siguiente" onClick={NextPage}>
 					Siguiente
-				</BtnConsultar>
+				</Btn>
 			</Paginations>
 		</Container>
 	);

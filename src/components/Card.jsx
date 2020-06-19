@@ -31,7 +31,7 @@ const CardAll = styled.div`
 	margin: 10px;
 
 	&:hover {
-		box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.2);
+		box-shadow: 0 25px 25px 0 rgba(66, 184, 131, 0.2);
 	}
 
 	@media only screen and (min-width: 300px) and (max-width: 800px) {
@@ -71,7 +71,7 @@ const P = styled.p`
 `;
 
 const H2 = styled.h2`
-	color: #ff9800;
+	color: #42b883;
 	font-size: 3em;
 	margin: 0 5px 0 5px;
 
@@ -90,7 +90,7 @@ const H4 = styled.h4`
 	text-align: left;
 	cursor: pointer;
 	&:hover {
-		color: #ff9800;
+		color: #42b883;
 	}
 `;
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import rym from "../images/hero.png";
 // import useGetData from "./components/useGetData";
@@ -77,23 +77,23 @@ const H2 = styled.h2`
 	text-align: center;
 `;
 
-const Select = styled.select`
-	width: 150px;
-	height: 35px;
-	background: #bbb9ba;
-	color: #212121;
-	padding-left: 5px;
-	font-size: 1em;
-	border: none;
-	cursor: pointer;
-	margin: 10px 0 0 10px;
+// const Select = styled.select`
+// 	width: 150px;
+// 	height: 35px;
+// 	background: #bbb9ba;
+// 	color: #212121;
+// 	padding-left: 5px;
+// 	font-size: 1em;
+// 	border: none;
+// 	cursor: pointer;
+// 	margin: 10px 0 0 10px;
 
-	option {
-		color: black;
-		background: #bbb9ba;
-		display: flex;
-	}
-`;
+// 	option {
+// 		color: black;
+// 		background: #bbb9ba;
+// 		display: flex;
+// 	}
+// `;
 
 const BtnConsultar = styled.button`
 	background-color: #fd0054;
@@ -122,7 +122,40 @@ const Form = styled.form`
 	display: contents;
 `;
 
+const Search = styled.input`
+	border-radius: 25px;
+	height: 25px;
+	font-size: 14px;
+	font-weight: 400;
+	padding-left: 5px;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	margin: 10px 0 0 10px;
+`;
+
 const Hero = () => {
+	const nombre = "";
+
+	const [name, setName] = useState(nombre);
+
+	const url = `https://rickandmortyapi.com/api/character/?name=${name}`;
+
+	const [data, setData] = useState([]);
+	const getcharacter = () => {
+		console.log(url);
+
+		const obtenerDatos = async () => {
+			const datos = await fetch(url);
+			const personajes = await datos.json();
+
+			setData(personajes);
+		};
+		obtenerDatos();
+		return data;
+	};
+	console.log(data);
+
 	return (
 		<ContainerHero>
 			<All>
@@ -131,28 +164,29 @@ const Hero = () => {
 				</ContainerIMG>
 				<Container>
 					<H2>
-						Puedes consultar los personajes con los siguientes filtros
+						Puedes consultar los personajes por busqueda o verlos todos
 					</H2>
 					<Form>
-						<Select>
+						{/* <Select>
 							<option value="" hidden>
 								- Select Status -
 							</option>
 							<option value="Alive">Alive</option>
 							<option value="Dead">Dead</option>
 							<option value="unknown">Unknown</option>
-						</Select>
-						<Select>
-							<option value="" hidden>
-								- Select Gender -
-							</option>
-							<option value="Female">Female</option>
-							<option value="Male">Male</option>
-							<option value="Genderless">Genderless</option>
-							<option value="unknown">Unknown</option>
-						</Select>
+						</Select> */}
+						<Search
+							// type="text"
+							name="personaje"
+							placeholder="Ej. Rick"
+							onChange={(e) => {
+								setName(e.target.value);
+							}}
+						/>
 
-						<BtnConsultar type="submit">Consultar</BtnConsultar>
+						<BtnConsultar type="button" onClick={getcharacter}>
+							Consultar
+						</BtnConsultar>
 					</Form>
 				</Container>
 			</All>

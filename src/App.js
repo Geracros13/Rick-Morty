@@ -1,4 +1,4 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import { createGlobalStyle } from "styled-components";
 import useGetData from "./components/useGetData";
 import Loader from "./components/Loader";
@@ -25,13 +25,15 @@ function App() {
 		<Loader />
 	) : (
 		<>
-			<GlobalStyle />
-			<Bar />
-			<Hero />
-			<Card results={data.results} />
-			<Pagination next={NextPage} prev={PreviousPage} />
-			<Footer />
-			<Copyright />
+			<StrictMode>
+				<GlobalStyle />
+				<Bar />
+				<Hero />
+				<Card results={data.results} />
+				<Pagination next={NextPage} prev={PreviousPage} />
+				<Footer />
+				<Copyright />
+			</StrictMode>
 		</>
 	);
 }
