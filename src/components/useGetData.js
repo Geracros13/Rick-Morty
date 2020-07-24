@@ -16,15 +16,28 @@ const useGetData = () => {
 
 	useEffect(() => {
 		obtenerDatos();
-	}, [api]); //Para que cada vez que cambie (api) se reenderize de nuevo con los nuevos personajes
+	}, [api]);
+	//eslint-disable-next-line
+
 	//Paginacion Previous Page
-	if (count > 1) {
-		var PreviousPage = () => setCount(count - 1);
-	}
+	// if (count > 1) {
+	// 	var PreviousPage = () => setCount(count - 1);
+	// 	console.log(data.info.pages);
+	// }
+
 	//Paginacion Next Page el valor 30 es porque en la data hay 30 Pages para paginar
-	if (count <= 30) {
-		var NextPage = () => setCount(count + 1);
-	}
+	// if (count <= 30) {
+	// 	var NextPage = () => setCount(count + 1);
+	// }
+
+	const PreviousPage = async () => await setCount(count - 1);
+	const NextPage = async () => await setCount(count + 1);
+	// const da = data.info.pages;
+	// if (data != 0) {
+	// 	console.log(da);
+
+	// 	console.log(data.info.next);
+	// }
 
 	return { data, NextPage, PreviousPage };
 };

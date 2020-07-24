@@ -77,24 +77,6 @@ const H2 = styled.h2`
 	text-align: center;
 `;
 
-// const Select = styled.select`
-// 	width: 150px;
-// 	height: 35px;
-// 	background: #bbb9ba;
-// 	color: #212121;
-// 	padding-left: 5px;
-// 	font-size: 1em;
-// 	border: none;
-// 	cursor: pointer;
-// 	margin: 10px 0 0 10px;
-
-// 	option {
-// 		color: black;
-// 		background: #bbb9ba;
-// 		display: flex;
-// 	}
-// `;
-
 const BtnConsultar = styled.button`
 	background-color: #fd0054;
 	border: 1px solid #a80038;
@@ -143,7 +125,7 @@ const Hero = () => {
 
 	const [data, setData] = useState([]);
 	const getcharacter = () => {
-		console.log(url);
+		// console.log(url);
 
 		const obtenerDatos = async () => {
 			const datos = await fetch(url);
@@ -167,14 +149,6 @@ const Hero = () => {
 						Puedes consultar los personajes por busqueda o verlos todos
 					</H2>
 					<Form>
-						{/* <Select>
-							<option value="" hidden>
-								- Select Status -
-							</option>
-							<option value="Alive">Alive</option>
-							<option value="Dead">Dead</option>
-							<option value="unknown">Unknown</option>
-						</Select> */}
 						<Search
 							// type="text"
 							name="personaje"
