@@ -119,14 +119,14 @@ const Colors = {
 		background: "#D63D2E",
 	},
 	unknown: {
-		background: "#23F1E8",
+		background: "#f3c623",
 	},
 };
 
 const Card = (props) => {
 	return (
 		<Container>
-			<H2>The Rick and Morty API</H2>
+			<H2>The Rick and Morty Characters</H2>
 			<Cards>
 				{props.results.map((character) => (
 					<CardAll key={character.id}>

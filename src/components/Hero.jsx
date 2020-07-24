@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import rym from "../images/hero.png";
-// import useGetData from "./components/useGetData";
 
 const ContainerHero = styled.div`
 	width: 100%;
@@ -42,7 +41,7 @@ const Container = styled.div`
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		margin: 0 15px 0;
+		margin: 0;
 	}
 `;
 
@@ -99,9 +98,8 @@ const BtnConsultar = styled.button`
 		transform: scale(0.9);
 	}
 `;
-
-const Form = styled.form`
-	display: contents;
+const ContainerButton = styled.div`
+	display: flex;
 `;
 
 const Search = styled.input`
@@ -148,20 +146,21 @@ const Hero = () => {
 					<H2>
 						Puedes consultar los personajes por busqueda o verlos todos
 					</H2>
-					<Form>
-						<Search
-							// type="text"
-							name="personaje"
-							placeholder="Ej. Rick"
-							onChange={(e) => {
-								setName(e.target.value);
-							}}
-						/>
 
+					<Search
+						// type="text"
+						name="personaje"
+						placeholder="Ej. Rick"
+						onChange={(e) => {
+							setName(e.target.value);
+						}}
+					/>
+					<ContainerButton>
 						<BtnConsultar type="button" onClick={getcharacter}>
 							Consultar
 						</BtnConsultar>
-					</Form>
+						<BtnConsultar disabled={true}>Ver Todos</BtnConsultar>
+					</ContainerButton>
 				</Container>
 			</All>
 		</ContainerHero>
