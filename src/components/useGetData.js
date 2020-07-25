@@ -17,10 +17,10 @@ const useGetData = () => {
 	useEffect(() => {
 		obtenerDatos();
 	}, [API]);
-	// eslint-disable-next-line
 
+	// Paginacion
 	const NextPage = () => {
-		const limite = data.info.pages;
+		let limite = data.info.pages;
 		if (count < limite) {
 			setCount(count + 1);
 		}
@@ -31,7 +31,18 @@ const useGetData = () => {
 		}
 	};
 
-	return { data, NextPage, PreviousPage };
+	// Buscar
+	const nombre = "";
+	const [name, setName] = useState(nombre);
+	const url = `https://rickandmortyapi.com/api/character/?name=${name}`;
+
+	// Funcion que me obtendra el valor ingresado en el input
+	const BuscarPersonaje = (e) => {
+		setName(e.target.value);
+		console.log(name);
+	};
+
+	return { data, NextPage, PreviousPage, BuscarPersonaje };
 };
 
 export default useGetData;

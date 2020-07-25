@@ -25,7 +25,7 @@ const LoaderMobile = styled.div`
 const LoaderSpinner = styled.div`
 	border: 5px solid #101010;
 	border-radius: 50%;
-	border-top: 5px solid #ff1500;
+	border-top: 5px solid white;
 	width: 50px;
 	height: 50px;
 	animation: ${spin} 2s linear infinite;

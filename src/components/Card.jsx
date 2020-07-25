@@ -6,13 +6,12 @@ const Container = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	background-color: #202329;
+	background-color: #f4f6ff;
 	margin: 0;
-	padding: 0;
+	padding-top: 40px;
 	@media only screen and (min-width: 300px) and (max-width: 800px) {
+		align-items: center;
 		display: flex;
-		justify-content: center;
-		flex-direction: column;
 	}
 `;
 
@@ -25,13 +24,13 @@ const CardAll = styled.div`
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
 	width: 275px;
-	background-color: #3c3e44;
+	background-color: #212121;
 	color: white;
 	display: inline-block;
 	margin: 10px;
 
 	&:hover {
-		box-shadow: 0 25px 25px 0 rgba(66, 184, 131, 0.2);
+		box-shadow: 0 25px 25px 0 rgba(33, 33, 33);
 	}
 
 	@media only screen and (min-width: 300px) and (max-width: 800px) {
@@ -70,17 +69,6 @@ const P = styled.p`
 	color: #9e9e9e;
 `;
 
-const H2 = styled.h2`
-	color: #42b883;
-	font-size: 3em;
-	margin: 0 5px 0 5px;
-
-	letter-spacing: 0.8px;
-	font-weight: 500;
-	padding: 30px;
-	text-align: center;
-`;
-
 const H4 = styled.h4`
 	margin: 0 0 10px 5px;
 	font-weight: 900;
@@ -102,7 +90,7 @@ const SPAN = styled.span`
 	margin-left: 5px;
 `;
 
-const Color = styled.span`
+const Status = styled.span`
 	display: inline-block;
 	height: 0.5em;
 	width: 0.5em;
@@ -126,7 +114,6 @@ const Colors = {
 const Card = (props) => {
 	return (
 		<Container>
-			<H2>The Rick and Morty Characters</H2>
 			<Cards>
 				{props.results.map((character) => (
 					<CardAll key={character.id}>
@@ -134,7 +121,7 @@ const Card = (props) => {
 						<CardContainer>
 							<H4>{character.name}</H4>
 							<P>
-								Status: <Color color={Colors[character.status]} />
+								Status: <Status color={Colors[character.status]} />
 								<SPAN>{character.status}</SPAN>
 							</P>
 							<P>

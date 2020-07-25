@@ -3,25 +3,30 @@ import styled from "styled-components";
 
 const ContainerBar = styled.div`
 	width: 100%;
-	height: 50px;
-	background-color: #ef4d52;
+	height: 75px;
+	background-color: #f4f6ff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 `;
 
-const H1 = styled.h1`
-	color: #252525;
-	font-size: 1.3em;
-	margin: 0;
+const H2 = styled.h2`
+	color: #212121;
+	font-size: 3em;
+	margin: 0 5px 0 5px;
 	letter-spacing: 0.8px;
 	font-weight: 500;
+	padding: 30px;
+	text-align: center;
+	@media only screen and (min-width: 320px) and (max-width: 720px) {
+		font-size: 2em;
+	}
 `;
 
 const Bar = () => {
 	return (
 		<ContainerBar>
-			<H1>Rick & Morty</H1>
+			<H2>The Rick & Morty</H2>
 		</ContainerBar>
 	);
 };

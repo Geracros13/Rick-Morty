@@ -6,30 +6,29 @@ const Container = styled.div`
 	align-items: center;
 	justify-content: center;
 	margin: 0;
-	background-color: #202329;
+	background-color: #f4f6ff;
 `;
 
 const Paginations = styled.div`
 	display: inline-block;
-	padding-bottom: 15px;
 `;
 const Btn = styled.button`
-	background-color: #fd0054;
-	border: 1px solid #a80038;
-	color: #252525;
+	background-color: #212121;
+	border: 1px solid #f4f6ff;
+	color: white;
 	font-size: 1.1em;
-	margin: 10px 0 20px 10px;
+	margin: 10px;
 	padding: 0.25em 1em;
 	height: 40px;
 	width: 150px;
-	border-radius: 50px;
+	border-radius: 15px;
 	transition: width 2s;
-	cursor: pointer;
+	outline: none;
 
 	&:hover {
 		width: 100;
-		background-color: #a80038;
-		color: #212121;
+		background-color: #404040;
+		color: white;
 	}
 	&:active {
 		transform: scale(0.9);

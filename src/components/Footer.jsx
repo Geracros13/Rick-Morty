@@ -43,7 +43,7 @@ const P = styled.p`
 
 const Social = styled.div`
 	display: inline-block;
-	margin-left: 100px;
+
 	@media only screen and (min-width: 300px) and (max-width: 800px) {
 		width: 300px;
 		margin-left: 30px;
