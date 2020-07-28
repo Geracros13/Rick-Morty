@@ -6,11 +6,15 @@ const Container = styled.div`
 	align-items: center;
 	justify-content: center;
 	margin: 0;
+	padding: 15px;
 	background-color: #f4f6ff;
 `;
 
 const Paginations = styled.div`
 	display: inline-block;
+	@media only screen and (min-width: 300px) and (max-width: 800px) {
+		display: flex;
+	}
 `;
 const Btn = styled.button`
 	background-color: #212121;
@@ -24,6 +28,7 @@ const Btn = styled.button`
 	border-radius: 15px;
 	transition: width 2s;
 	outline: none;
+	cursor: pointer;
 
 	&:hover {
 		width: 100;

@@ -16,6 +16,7 @@ const useGetData = () => {
 
 	useEffect(() => {
 		obtenerDatos();
+		// eslint-disable-next-line
 	}, [API]);
 
 	// Paginacion
@@ -34,7 +35,7 @@ const useGetData = () => {
 	// Buscar
 	const nombre = "";
 	const [name, setName] = useState(nombre);
-	const url = `https://rickandmortyapi.com/api/character/?name=${name}`;
+	// const url = `https://rickandmortyapi.com/api/character/?name=${name}`;
 
 	// Funcion que me obtendra el valor ingresado en el input
 	const BuscarPersonaje = (e) => {

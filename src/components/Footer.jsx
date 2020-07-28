@@ -7,20 +7,29 @@ const Container = styled.div`
 	background-color: #212121;
 	color: #fff;
 	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
 	@media only screen and (min-width: 300px) and (max-width: 800px) {
 		height: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 	}
 `;
 
 const Description = styled.div`
 	display: inline-block;
-	margin: 0 300px 0 100px;
+	margin: 0 100px 0 100px;
 	width: 430px;
 	@media only screen and (min-width: 300px) and (max-width: 800px) {
-		margin: 0 30px 0;
 		width: 300px;
 		display: flex;
 		flex-direction: column;
+		margin: 0 30px 0;
+		align-items: flex-start;
 	}
 `;
 
@@ -42,11 +51,16 @@ const P = styled.p`
 `;
 
 const Social = styled.div`
-	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-right: 200px;
 
 	@media only screen and (min-width: 300px) and (max-width: 800px) {
 		width: 300px;
-		margin-left: 30px;
+		margin: 0 30px 0;
+		align-items: flex-start;
 	}
 `;
 const Ul = styled.ul`
