@@ -32,18 +32,7 @@ const useGetData = () => {
 		}
 	};
 
-	// Buscar
-
-	const [name, setName] = useState("");
-	// const url = `https://rickandmortyapi.com/api/character/?name=${name}`;
-
-	// Funcion que me obtendra el valor ingresado en el input
-	const BuscarPersonaje = (e) => {
-		setName(e.target.value);
-		console.log(name);
-	};
-
-	return { data, NextPage, PreviousPage, BuscarPersonaje };
+	return { data, NextPage, PreviousPage };
 };
 
 export default useGetData;

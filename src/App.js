@@ -3,7 +3,6 @@ import { createGlobalStyle } from "styled-components";
 import useGetData from "./components/useGetData";
 import Loader from "./components/Loader";
 import Bar from "./components/Bar";
-import Hero from "./components/Hero";
 import Card from "./components/Card";
 import Pagination from "./components/Pagination";
 import Footer from "./components/Footer";
@@ -28,7 +27,6 @@ function App() {
 			<StrictMode>
 				<GlobalStyle />
 				<Bar />
-				<Hero />
 				<Card results={data.results} />
 				<Pagination next={NextPage} prev={PreviousPage} />
 				<Footer />
