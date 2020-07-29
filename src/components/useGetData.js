@@ -33,8 +33,8 @@ const useGetData = () => {
 	};
 
 	// Buscar
-	const nombre = "";
-	const [name, setName] = useState(nombre);
+
+	const [name, setName] = useState("");
 	// const url = `https://rickandmortyapi.com/api/character/?name=${name}`;
 
 	// Funcion que me obtendra el valor ingresado en el input

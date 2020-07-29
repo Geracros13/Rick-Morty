@@ -66,14 +66,11 @@ const Hero = () => {
 	const { BuscarPersonaje } = useGetData();
 	return (
 		<Container>
-			<Search
-				type="text"
-				name="personaje"
-				placeholder="Buscar..."
-				onChange={BuscarPersonaje}
-			/>
+			<Search type="text" name="personaje" placeholder="Buscar..." />
 
-			<BtnConsultar type="button">Consultar</BtnConsultar>
+			<BtnConsultar type="button" onClick={BuscarPersonaje}>
+				Consultar
+			</BtnConsultar>
 		</Container>
 	);
 };
