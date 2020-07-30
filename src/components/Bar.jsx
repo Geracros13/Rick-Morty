@@ -4,14 +4,14 @@ import styled from "styled-components";
 const ContainerBar = styled.div`
 	width: 100%;
 	height: 75px;
-	background-color: #f4f6ff;
+	background-color: #212121;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 `;
 
 const H2 = styled.h2`
-	color: #212121;
+	color: #f4f6ff;
 	font-size: 3em;
 	margin: 0 5px 0 5px;
 	letter-spacing: 0.8px;
