@@ -21,7 +21,7 @@ const Cards = styled.div`
 `;
 
 const CardAll = styled.div`
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 	transition: 0.3s;
 	width: 275px;
 	background-color: #212121;
