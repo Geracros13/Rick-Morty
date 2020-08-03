@@ -84,7 +84,7 @@ const Footer = () => {
 	return (
 		<Container>
 			<Description>
-				<H3>Gerardo Quiñonez Front-End Developer & DevOps Jr</H3>
+				<H3>Front-End Developer & DevOps Jr</H3>
 				<P>
 					I've knowledge in the DevOps culture, with experience in CI / CD
 					with Azure and Jenkins tools. Knowledge of how to evaluate the

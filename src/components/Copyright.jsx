@@ -29,7 +29,7 @@ const Copyright = () => {
 	return (
 		<Container>
 			<Name>
-				Manuel Flores ©{anio.getFullYear()} Copyright
+				Gerardo Quiñonez ©{anio.getFullYear()} Copyright
 				<A href="mailto:mgfq13@hotmail.com">E-mail</A>
 			</Name>
 		</Container>
