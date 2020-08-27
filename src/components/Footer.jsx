@@ -86,11 +86,8 @@ const Footer = () => {
 			<Description>
 				<H3>Front-End Developer & DevOps Jr</H3>
 				<P>
-					I've knowledge in the DevOps culture, with experience in CI / CD
-					with Azure and Jenkins tools. Knowledge of how to evaluate the
-					quality of the source code with the Sonarqube. Experience in
-					Performance, Accessibility, Best Practices, Seo in personal
-					projects that i've done as Front-end.
+					I'm a Frontend Dev with an understanding of Devops culture and
+					passionate about constant learning.
 				</P>
 			</Description>
 			<Social>

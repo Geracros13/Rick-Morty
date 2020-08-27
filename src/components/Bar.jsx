@@ -16,7 +16,6 @@ const H2 = styled.h2`
 	margin: 0;
 	letter-spacing: 0.8px;
 	font-weight: 500;
-	padding-top: 30px;
 	text-align: center;
 	@media only screen and (min-width: 320px) and (max-width: 720px) {
 		font-size: 2em;
